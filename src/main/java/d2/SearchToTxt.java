@@ -18,11 +18,13 @@ import java.util.Map;
  */
 
 /**
- * 这个程序有哪些问题？
+ * 需求：
+ * 把指定表的一些字段输出到txt，使用特定字符分隔及换行
+ * 需求分析：
+ * 目前已知两张表以及它的字段及顺序，涉及变动的可能有增加表、增加字段、调整顺序，另外客户希望如果发生这些变动，
+ * 能够实现不改代码
  *
- * 把顺序维护出来，可以降低一定的维护难度；但是map.get的值不可能都是想要的，有可能需要转换呢？
- *
- * 有可能文件要进行滚动生成，并且这里没有使用换行和分隔符
+ * 不采取存储过程的话，需要配置文件维护表及字段信息
  */
 public class SearchToTxt implements Runnable {
     private List<Map<String, Object>> writeToTxtList = new ArrayList<Map<String, Object>>();

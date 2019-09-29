@@ -18,6 +18,7 @@ public class SimpleCol extends Col {
         if (o == null) {
             return "";
         }
+
         return String.valueOf(o);
     }
 }
